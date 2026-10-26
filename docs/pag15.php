@@ -1,3 +1,25 @@
+<?php
+include("conexion.php")
+$cancha   = $_POST['cancha']   ?? '';
+$dia      = $_POST['dia']      ?? '';
+$horario  = $_POST['horario']  ?? '';
+$nombre   = $_POST['nombre']   ?? '';
+$telefono = $_POST['telefono'] ?? '';
+$equipo   = $_POST['equipo']   ?? '';
+$extras_array = $_POST['extras'] ?? array();
+$extras_texto = implode(", ", $extras_array);
+
+if (!empty($nombre) && !empty($telefono)) {
+    $sql = "INSERT INTO reservas (cancha, dia, horario, extras, nombre, telefono, equipo) 
+            VALUES ('$cancha', '$dia', '$horario', '$extras_texto', '$nombre', '$telefono', '$equipo')";
+
+    $resultado = mysqli_query($conexion, $sql);
+}
+
+if (!$resultado) {
+        echo "Error en la consulta: " . mysqli_error($conexion);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

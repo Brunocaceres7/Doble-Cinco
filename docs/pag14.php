@@ -1,3 +1,9 @@
+<?php 
+$cancha  = $_POST['cancha']  ?? '';
+$dia     = $_POST['dia']     ?? '';
+$horario = $_POST['horario'] ?? '';
+$extras  = $_POST['extras']  ?? array();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +33,16 @@
                 <div class="linea141">
                     <div class="linea142"></div>
                 </div>
-                <form class="formulario14">
+                <form action="pag15.php" method="POST" class="formulario14">
+
+                <input type="hidden" name="cancha" value="<?php echo $cancha; ?>">
+                <input type="hidden" name="dia" value="<?php echo $dia; ?>">
+                <input type="hidden" name="horario" value="<?php echo $horario; ?>">
+
+                <?php foreach ($extras as $extra): ?>
+                    <input type="hidden" name="extras[]" value="<?php echo $extra; ?>">
+                <?php endforeach; ?>
+
                     <label>
                         <input type="text" name="nombre" class="inputnombre" placeholder="Nombre y Apellido">
                     </label>
@@ -37,8 +52,8 @@
                     <label>
                         <input type="text" name="equipo" class="inputequipo" placeholder="Nombre del equipo (Opcional)">
                     </label>
+                    <button type="submit" class="cuadro135">Confirmar Reserva</button>
                 </form>
-                <a class="cuadro135" href="pag15.php">Continuar</a>
             </div>
             <div class="cuadro21">
                 <div class="horizontal21">

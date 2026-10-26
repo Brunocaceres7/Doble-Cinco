@@ -29,9 +29,9 @@
                 </div>
                 <p class="texto81">Elegí el día</p>
                 <div class="cuadros81">
-                    <a class="nodisponible81" href="pag12.php">hoy 8</a>
+                    <a class="disponible81" href="pag12.php">hoy 8</a>
                     <a class="nodisponible81" href="pag12.php">Vie 9</a>
-                    <a class="disponible81" href="#">Sáb 10</a>
+                    <a class="nodisponible81" href="#">Sáb 10</a>
                     <a class="nodisponible81" href="pag12.php">Dom 11</a>
                     <a class="nodisponible81" href="pag12.php">Lun 12</a>
                 </div>
@@ -39,12 +39,12 @@
                 <div class="cuadros82">
                     <a class="nodisponible82" href="pag12.php">18:00</p>
                     <a class="nodisponible82" href="pag12.php">19:00</a>
-                    <a class="nodisponible82" href="pag12.php">20:00</a>
-                    <a class="disponible82" href="#">21:00</a>
+                    <a class="disponible82" href="#">20:00</a>
+                    <a class="nodisponible82" href="pag12.php">21:00</a>
                     <a class="nodisponible82" href="pag12.php">22:00</a>
                 </div>
                 <p class="afuera81">23:00</p>
-                <a class="cuadro81" href="pag13.php">Continuar</a>
+                <a class="cuadro81" href="pag13.php?cancha=Cancha+1&dia=Jueves+8&horario=20:00">Continuar</a>
             </div>
             <div class="cuadro21">
                 <div class="horizontal21">

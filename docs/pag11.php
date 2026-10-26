@@ -44,7 +44,7 @@
                     <a class="disponible82" href="#">22:00</a>
                 </div>
                 <p class="afuera81">23:00</p>
-                <a class="cuadro81" href="pag13.php">Continuar</a>
+                <a class="cuadro81" href="pag13.php?cancha=Cancha+4&dia=Lunes+8&horario=22:00">Continuar</a>
             </div>
             <div class="cuadro21">
                 <div class="horizontal21">

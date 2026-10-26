@@ -1,3 +1,8 @@
+<?php
+$cancha = $_GET['cancha'] ?? '';
+$dia = $_GET['dia'] ?? '';
+$horario = $_GET['horario'] ?? '';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,23 +33,26 @@
                     <div class="linea132"></div>
                 </div>
                 <p class="subtitulo131">Suma lo que necesiten</p>
-                <div class="cuadro131">
-                    <div class="circulo131"></div>
-                    <p>Pelota</p>
-                </div>
-                <div class="cuadro132">
-                    <div class="circulo132"></div>
-                    <p>Chalecos</p>
-                </div>
-                <div class="cuadro133">
-                    <div class="circulo133"></div>
-                    <p>Árbitro</p>
-                </div>
-                <div class="cuadro134">
-                    <div class="circulo134"></div>
-                    <p>Nada, gracias</p>
-                </div>
-                <a class="cuadro135" href="pag14.php">Continuar</a>
+                <form action="pag14.php" method="POST">
+                    
+                    <input type="hidden" name="cancha" value="<?php echo $cancha; ?>">
+                    <input type="hidden" name="dia" value="<?php echo $dia; ?>">
+                    <input type="hidden" name="horario" value="<?php echo $horario; ?>">
+
+                    <label class="cuadro131">
+                        <input type="checkbox" name="extras[]" value="Pelota" class="checkbox-extra">
+                        <p>Pelota</p>
+                    </label>
+                    <label class="cuadro131">
+                        <input type="checkbox" name="extras[]" value="Chalecos" class="checkbox-extra">
+                        <p>Chalecos</p>
+                    </label>
+                    <label class="cuadro131">
+                        <input type="checkbox" name="extras[]" value="Arbitro" class="checkbox-extra">
+                        <p>Árbitro</p>
+                    </label>
+                    <button type="submit" class="cuadro135">Continuar</button>
+                </form>
             </div>
             <div class="cuadro21">
                 <div class="horizontal21">
