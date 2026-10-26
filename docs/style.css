@@ -1904,6 +1904,8 @@
 #input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
+
 @media (max-width: 1850px) {
     main, .contenedor11, .contenedor21, .contenedor231 {
         flex-direction: column;
@@ -1916,7 +1918,7 @@
     }
 
     .titulo11, .titulo18, .titulo21, .titulo31, .titulo41, .titulo81, .titulo131, .titulo141,
-    .titulo161, .titulo171, .titulo191, .titulo201, .titulo221, .titulo231,
+    .titulo161, .titulo171, .titulo191, .titulo201, .titulo221, .titulo231, .titulo241,
     .subtitulo, .subtitulo11, .subtitulo41, .subtitulo131, .subtitulo191, .subtitulo201,
     .paso81, .paso131, .paso141, .texto81, .texto82, .otraduda201, .disponibles11,
     .precio41, .boton1, .boton191, .afuera81, .cuadros41, .cuadros81, .cuadros82 {
@@ -1931,7 +1933,8 @@
     .contenedor12, .contenedor13, .contenedor32, .contenedor33, .contenedor34, .contenedor161,
     .cuadro131, .cuadro132, .cuadro133, .cuadro134, .cuadro171, .cuadro173, .cuadro174,
     .cuadro175, .cuadro176, .cuadro201, .cuadro202, .cuadro203, .cuadro204, .cuadro205,
-    .cuadro231, .cuadro232, .cuadro233, .cuadro41, .boton201, .subtitulo31, .opciones21 a,
+    .cuadro231, .cuadro232, .cuadro233, .cuadro241, .cuadro41, .boton201, .subtitulo31, .opciones21 a,
+    .cerrarsesion, .misreservas231,
     .linea81, .linea131, .linea141 {
         width: 90%;
         margin-left: 5%;
@@ -2002,6 +2005,9 @@
     .avatar231 {
         margin: 30px auto;
     }
+    .cerrarsesion {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -2021,11 +2027,11 @@
         order: 2;
         margin: 10px 0;
         padding: 3px 5px;
-        font-size: min(3.7vw, 20px);
+        font-size: min(3.2vw, 20px);
     }
     .titulo11, .titulo18, .titulo21, .titulo31, .titulo41, .titulo81, .titulo121, .titulo131,
     .titulo141, .titulo151, .titulo161, .titulo171, .titulo191, .titulo201, .titulo221,
-    .titulo231 {
+    .titulo231, .titulo241 {
         font-size: 2rem;
     }
     .subtitulo121, .subtitulo151 {
@@ -2040,5 +2046,11 @@
     .texto161, .texto162, .texto163, .texto164 {
         font-size: 16px;
         margin-right: 10px;
+    }
+    .horario11, .horario12, .horario31, .horario32, .horario33, .horario34 {
+        font-size: 18px;
+    }
+    .cuadro12, .cuadro13, .cuadro31, .cuadro32, .cuadro33, .cuadro34 {
+        flex-shrink: 0;
     }
 }
