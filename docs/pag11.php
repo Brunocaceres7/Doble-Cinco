@@ -16,7 +16,7 @@
             <a class="menu" href="pag2.php">Menú</a>
             <a class="contacto" href="pag16.php">Contacto</a>
             <a class="perfil" href="pag23.php">Perfil</a>
-            <a class="reservar" href="pag3.php">Reservar</a>
+            <a class="reservar" href="pag24.php">Mis reservas</a>
         </nav>
     </header>
     <main>
@@ -37,14 +37,14 @@
                 </div>
                 <p class="texto82">Elegí el horario</p>
                 <div class="cuadros82">
-                    <a class="nodisponible82" href="pag12.php">18:00</p>
+                    <a class="nodisponible82" href="pag12.php">18:00</a>
                     <a class="nodisponible82" href="pag12.php">19:00</a>
                     <a class="nodisponible82" href="pag12.php">20:00</a>
                     <a class="nodisponible82" href="pag12.php">21:00</a>
                     <a class="disponible82" href="#">22:00</a>
                 </div>
                 <p class="afuera81">23:00</p>
-                <a class="cuadro81" href="pag13.php?cancha=Cancha+4&dia=Lunes+8&horario=22:00">Continuar</a>
+                <a class="cuadro81" href="pag13.php?id_cancha=4&fecha=2026-10-08&hora=22">Continuar</a>
             </div>
             <div class="cuadro21">
                 <div class="horizontal21">

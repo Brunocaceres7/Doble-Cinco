@@ -2,35 +2,28 @@
 session_start();
 include("conexion.php");
 
-$email    = $_POST['email'] ?? '';
+$email    = trim($_POST['email'] ?? '');
 $password = $_POST['password'] ?? '';
 
-if (!empty($email) && !empty($password)) {
-    $query  = "SELECT * FROM usuarios WHERE email = '$email' LIMIT 1";
-    $result = mysqli_query($conexion, $query);
-
-    if ($result && mysqli_num_rows($result) > 0) {
-        $usuario = mysqli_fetch_assoc($result);
-
-        if ($password === $usuario['password']) {
-            $_SESSION['usuario_id'] = $usuario['id'];
-            $_SESSION['nombre']     = $usuario['nombre'];
-            $_SESSION['email']      = $usuario['email'];
-
-            header("Location: pag1.php");
-            exit();
-        } else {
-            // Contraseña incorrecta a pag21.php
-            header("Location: pag21.php");
-            exit();
-        }
-    } else {
-        // Correo no encontrado a pag21.php
-        header("Location: pag21.php");
-        exit();
-    }
-} else {
+if ($email === '' || $password === '') {
     header("Location: pag21.php");
     exit();
 }
+
+$stmt = $conexion->prepare("SELECT id_usuario, nombre, email, telefono, contrasena FROM Usuario WHERE email = ? LIMIT 1");
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$usuario = $stmt->get_result()->fetch_assoc();
+
+if ($usuario && password_verify($password, $usuario['contrasena'])) {
+    $_SESSION['usuario_id'] = $usuario['id_usuario'];
+    $_SESSION['nombre']     = $usuario['nombre'];
+    $_SESSION['email']      = $usuario['email'];
+    $_SESSION['telefono']   = $usuario['telefono'];
+    header("Location: pag1.php");
+    exit();
+}
+
+header("Location: pag21.php");
+exit();
 ?>

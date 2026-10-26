@@ -16,7 +16,7 @@
             <a class="menu" href="pag2.php">Menú</a>
             <a class="contacto" href="pag16.php">Contacto</a>
             <a class="perfil" href="pag23.php">Perfil</a>
-            <a class="reservar" href="pag3.php">Reservar</a>
+            <a class="reservar" href="pag24.php">Mis reservas</a>
         </nav>
     </header>
     <main>

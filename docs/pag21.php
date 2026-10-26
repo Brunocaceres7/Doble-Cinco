@@ -11,12 +11,12 @@
         <nav class="Barra">
             <p class="logo1">DOBLE</p>
             <p class="logo2">5</p>
-            <a class="inicio" href="#">Inicio</a>
-            <a class="canchas" href="#">Canchas</a>
-            <a class="menu" href="#">Menú</a>
-            <a class="contacto" href="#">Contacto</a>
-            <a class="perfil" href="#">Perfil</a>
-            <a class="reservar" href="#">Reservar</a>
+            <a class="inicio" href="pag1.php">Inicio</a>
+            <a class="canchas" href="pag3.php">Canchas</a>
+            <a class="menu" href="pag2.php">Menú</a>
+            <a class="contacto" href="pag16.php">Contacto</a>
+            <a class="perfil" href="pag23.php">Perfil</a>
+            <a class="reservar" href="pag24.php">Mis reservas</a>
         </nav>
     </header>
     <main>
@@ -27,7 +27,7 @@
                 <div class="linea212"></div>
             </div>
         </div>
-        <a class="volveraintentar" href="pag18.html">Volver a intentar</a>
+        <a class="volveraintentar" href="pag18.php">Volver a intentar</a>
     </main>
 </body>
 </html>

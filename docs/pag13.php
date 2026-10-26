@@ -1,7 +1,13 @@
 <?php
-$cancha = $_GET['cancha'] ?? '';
-$dia = $_GET['dia'] ?? '';
-$horario = $_GET['horario'] ?? '';
+session_start();
+$id_cancha = $_GET['id_cancha'] ?? '';
+$fecha     = $_GET['fecha'] ?? '';
+$hora      = $_GET['hora'] ?? '';
+
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: pag18.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +27,7 @@ $horario = $_GET['horario'] ?? '';
             <a class="menu" href="pag2.php">Menú</a>
             <a class="contacto" href="pag16.php">Contacto</a>
             <a class="perfil" href="pag23.php">Perfil</a>
-            <a class="reservar" href="pag3.php">Reservar</a>
+            <a class="reservar" href="pag24.php">Mis reservas</a>
         </nav>
     </header>
     <main>
@@ -35,9 +41,9 @@ $horario = $_GET['horario'] ?? '';
                 <p class="subtitulo131">Suma lo que necesiten</p>
                 <form action="pag14.php" method="POST">
                     
-                    <input type="hidden" name="cancha" value="<?php echo $cancha; ?>">
-                    <input type="hidden" name="dia" value="<?php echo $dia; ?>">
-                    <input type="hidden" name="horario" value="<?php echo $horario; ?>">
+                    <input type="hidden" name="id_cancha" value="<?php echo $id_cancha; ?>">
+                    <input type="hidden" name="fecha" value="<?php echo $fecha; ?>">
+                    <input type="hidden" name="hora" value="<?php echo $hora; ?>">
 
                     <label class="cuadro131">
                         <input type="checkbox" name="extras[]" value="Pelota" class="checkbox-extra">

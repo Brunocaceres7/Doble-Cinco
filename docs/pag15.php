@@ -1,21 +1,40 @@
 <?php
+session_start();
 include("conexion.php");
 
-$cancha   = $_POST['cancha']   ?? '';
-$dia      = $_POST['dia']      ?? '';
-$horario  = $_POST['horario']  ?? '';
-$nombre   = $_POST['nombre']   ?? '';
-$telefono = $_POST['telefono'] ?? '';
-$equipo   = $_POST['equipo']   ?? '';
-$extras   = implode(", ", $_POST['extras'] ?? []);
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: pag18.php");
+    exit();
+}
 
-if (!empty($nombre) && !empty($telefono)) {
-    $stmt = $conn->prepare("INSERT INTO reservas (cancha, dia, horario, extras, nombre, telefono, equipo) VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssss", $cancha, $dia, $horario, $extras, $nombre, $telefono, $equipo);
+$id_usuario  = $_SESSION['usuario_id'];
+$id_cancha   = (int)($_POST['id_cancha'] ?? 0);
+$fecha       = $_POST['fecha'] ?? '';
+$hora_inicio = (int)($_POST['hora'] ?? 0);
+$hora_fin    = $hora_inicio + 1;
+$equipo      = trim($_POST['equipo'] ?? '');
+$extras      = implode(", ", $_POST['extras'] ?? []);
 
-    if (!$stmt->execute()) {
-        echo "Error en la consulta: " . $stmt->error;
-    }
+if ($id_cancha === 0 || $fecha === '') {
+    header("Location: pag3.php");
+    exit();
+}
+$stmt = $conexion->prepare("SELECT id_reserva FROM reserva WHERE id_cancha = ? AND fecha = ? AND hora_inicio = ?");
+$stmt->bind_param("isi", $id_cancha, $fecha, $hora_inicio);
+$stmt->execute();
+$stmt->store_result();
+
+if ($stmt->num_rows > 0) {
+    header("Location: pag12.php");
+    exit();
+}
+
+$stmt = $conexion->prepare("INSERT INTO reserva (id_usuario, id_cancha, fecha, hora_inicio, hora_fin, extras, equipo) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("iisiiss", $id_usuario, $id_cancha, $fecha, $hora_inicio, $hora_fin, $extras, $equipo);
+
+if (!$stmt->execute()) {
+    header("Location: pag12.php");
+    exit();
 }
 ?>
 <!DOCTYPE html>
@@ -36,7 +55,7 @@ if (!empty($nombre) && !empty($telefono)) {
             <a class="menu" href="pag2.php">Menú</a>
             <a class="contacto" href="pag16.php">Contacto</a>
             <a class="perfil" href="pag23.php">Perfil</a>
-            <a class="reservar" href="pag3.php">Reservar</a>
+            <a class="reservar" href="pag24.php">Mis reservas</a>
         </nav>
     </header>
     <main>

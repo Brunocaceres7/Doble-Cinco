@@ -16,7 +16,7 @@
             <a class="menu" href="pag2.php">Menú</a>
             <a class="contacto" href="pag16.php">Contacto</a>
             <a class="perfil" href="pag23.php">Perfil</a>
-            <a class="reservar" href="pag3.php">Reservar</a>
+            <a class="reservar" href="pag24.php">Mis reservas</a>
         </nav>
     </header>
     <main style="display: flex;">
@@ -31,7 +31,7 @@
             <div class="texto31">
                 <p class="cancha31">Cancha 1 - Fútbol 5</p>
                 <p class="cesped31">Césped sintético - techada</p>
-                <p class="horario31">4 horarios libres - $30.000</p>
+                <p class="horario31">1 horario libre - $30.000</p>
             </div>
         </a>
         <a class="contenedor32" href="pag5.php">
@@ -42,7 +42,7 @@
             <div class="texto32">
                 <p class="cancha32">Cancha 2 - Fútbol 5</p>
                 <p class="cesped32">Césped sintético - al aire libre</p>
-                <p class="horario32">4 horarios libres - $30.000</p>
+                <p class="horario32">1 horarios libre - $30.000</p>
             </div>
         </a>
         <a class="contenedor33" href="pag6.php">
@@ -53,7 +53,7 @@
             <div class="texto33">
                 <p class="cancha33">Cancha 3 - Fútbol 7</p>
                 <p class="cesped33">Césped sintético - techada</p>
-                <p class="horario33">4 horarios libres - $40.000</p>
+                <p class="horario33">1 horarios libre - $40.000</p>
             </div>
         </a>
         <a class="contenedor34" href="pag7.php">
@@ -64,7 +64,7 @@
             <div class="texto34">
                 <p class="cancha34">Cancha 4 - Fútbol 7</p>
                 <p class="cesped34">Césped sintético - al aire libre</p>
-                <p class="horario34">4 horarios libres - $40.000</p>
+                <p class="horario34">1 horario libre - $40.000</p>
             </div>
         </a>
         </div>

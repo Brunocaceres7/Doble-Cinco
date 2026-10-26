@@ -1,8 +1,14 @@
 <?php 
-$cancha  = $_POST['cancha']  ?? '';
-$dia     = $_POST['dia']     ?? '';
-$horario = $_POST['horario'] ?? '';
-$extras  = $_POST['extras']  ?? array();
+session_start();
+$id_cancha = $_POST['id_cancha'] ?? '';
+$fecha     = $_POST['fecha'] ?? '';
+$hora      = $_POST['hora'] ?? '';
+$extras    = $_POST['extras'] ?? array();
+
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: pag18.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +28,7 @@ $extras  = $_POST['extras']  ?? array();
             <a class="menu" href="pag2.php">Menú</a>
             <a class="contacto" href="pag16.php">Contacto</a>
             <a class="perfil" href="pag23.php">Perfil</a>
-            <a class="reservar" href="pag3.php">Reservar</a>
+            <a class="reservar" href="pag24.php">Mis reservas</a>
         </nav>
     </header>
     <main>
@@ -35,9 +41,9 @@ $extras  = $_POST['extras']  ?? array();
                 </div>
                 <form action="pag15.php" method="POST" class="formulario14">
 
-                <input type="hidden" name="cancha" value="<?php echo $cancha; ?>">
-                <input type="hidden" name="dia" value="<?php echo $dia; ?>">
-                <input type="hidden" name="horario" value="<?php echo $horario; ?>">
+                <input type="hidden" name="id_cancha" value="<?php echo $id_cancha; ?>">
+                <input type="hidden" name="fecha" value="<?php echo $fecha; ?>">
+                <input type="hidden" name="hora" value="<?php echo $hora; ?>">
 
                 <?php foreach ($extras as $extra): ?>
                     <input type="hidden" name="extras[]" value="<?php echo $extra; ?>">

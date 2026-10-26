@@ -18,12 +18,12 @@ if (isset($_SESSION['usuario_id'])) {
         <nav class="Barra">
             <p class="logo1">DOBLE</p>
             <p class="logo2">5</p>
-            <a class="inicio" href="#">Inicio</a>
-            <a class="canchas" href="#">Canchas</a>
-            <a class="menu" href="#">Menú</a>
-            <a class="contacto" href="#">Contacto</a>
-            <a class="perfil" href="#">Perfil</a>
-            <a class="reservar" href="#">Reservar</a>
+            <a class="inicio" href="pag1.php">Inicio</a>
+            <a class="canchas" href="pag3.php">Canchas</a>
+            <a class="menu" href="pag2.php">Menú</a>
+            <a class="contacto" href="pag16.php">Contacto</a>
+            <a class="perfil" href="pag23.php">Perfil</a>
+            <a class="reservar" href="pag24.php">Mis reservas</a>
         </nav>
     </header>
     <main>
@@ -31,7 +31,7 @@ if (isset($_SESSION['usuario_id'])) {
         <h2 class="subtitulo">Ingresá con tu cuenta</h2>
         <p class="boton1">Iniciar sesión</p>
         <a class="boton2" href="pag19.php">Crear cuenta</a>
-        <form action="pag1.php" method="POST">
+        <form action="validar_login.php" method="POST">
             <label>
                 <input type="email" id="email" name="email" class="inputemail" placeholder="Correo electronico">
             </label>
