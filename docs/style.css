@@ -162,6 +162,11 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
 }
 .titulo21{
     margin-top: 60px;
@@ -1562,19 +1567,25 @@
     text-align: left;
 }
 .botoncrear191{
-    display: block;
-    width: 400px;
-    margin-top: 50px;
-    margin-left: 457px;
-    margin-bottom: 60px;
-    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 70px;
     background-color: #B3F34A;
+    margin-top: 40px;
+    margin-left: 250px;
     border-radius: 20px;
-    text-align: center;
-    text-decoration: none;
+    font-size: 25px;
     color: #0B3D2E;
-    font-size: 20px;
+    font-weight: bold;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 0;
 }
+
 .titulo201{
     margin-top: 60px;
     margin-left: 80px;

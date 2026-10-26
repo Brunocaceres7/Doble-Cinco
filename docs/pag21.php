@@ -20,7 +20,7 @@
         </nav>
     </header>
     <main>
-        <h1 class="titulo21">Cuenta no encontrada</h1>
+        <h1 class="titulo21">Cuenta inválida</h1>
         <div class="error">
             <div class="circulo211">
                 <div class="linea211"></div>

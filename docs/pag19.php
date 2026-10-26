@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_SESSION["usuario_id"])) {
+    header("Location: pag22.php");
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +33,7 @@
         <h2 class="subtitulo191">Ingresá con tu cuenta</h2>
         <a class="boton191" href="pag18.php">Iniciar sesión</a>
         <p class="boton192">Crear cuenta</p>
-        <form>
+        <form method="POST" action="validar_cuenta.php">
             <label>
                 <input type="email" id="email" name="email" class="inputemail191" placeholder="Correo electrónico">
             </label>
@@ -40,8 +49,9 @@
             <label>
                 <input type="text" id="apellido" name="apellido" class="inputapellido191" placeholder="Apellido">
             </label>
+            <button type="submit" class="botoncrear191">Crear</button>
         </form>
-        <a class="botoncrear191" href="pag22.php">Crear</a>
+        
     </main>
 </body>
 </html>
